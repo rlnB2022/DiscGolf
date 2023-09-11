@@ -15,10 +15,9 @@ for (const [index, button] of mobileNavButtons.entries()) {
 			if (btn !== button) {
 				btn.classList.remove("menu-active");
 				mobileNavTopBar.className = "";
-				mobileNavTopBar.classList.add("menu-selector");
-				mobileNavTopBar.classList.add("menu-" + index);
-				// if (mobileNavTopBar.classList.add("menu-" + index)) {
-				// }
+
+				const newClassList = ["menu-selector", "menu-" + index];
+				mobileNavTopBar.classList.add(...newClassList);
 			}
 		});
 		button.classList.add("menu-active");
