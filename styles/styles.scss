@@ -37,9 +37,40 @@ nav {
 		left: 0;
 		right: 0;
 
+		.menu-selector-wrapper {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			hr {
+				&.menu-selector {
+					position: relative;
+					height: 3px;
+					width: 100%;
+					left: 0;
+					background-color: #000;
+					transition: all 0.25s ease-in-out;
+
+					&.menu-1 {
+						left: 100%;
+					}
+
+					&.menu-2 {
+						left: 200%;
+					}
+
+					&.menu-3 {
+						left: 300%;
+					}
+
+					&.menu-4 {
+						left: 400%;
+					}
+				}
+			}
+		}
+
 		ul {
-			display: flex;
-			justify-content: space-evenly;
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
 			list-style-type: none;
 			background-color: #fff;
 			height: 5rem;
@@ -82,7 +113,4 @@ nav {
 			}
 		}
 	}
-}
-
-.test {
 }

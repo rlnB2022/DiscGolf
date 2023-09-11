@@ -34,9 +34,33 @@ nav.mobile-navbar {
   left: 0;
   right: 0;
 }
+nav.mobile-navbar .menu-selector-wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+nav.mobile-navbar .menu-selector-wrapper hr.menu-selector {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  background-color: #000;
+  transition: all 0.25s ease-in-out;
+}
+nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-1 {
+  left: 100%;
+}
+nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-2 {
+  left: 200%;
+}
+nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-3 {
+  left: 300%;
+}
+nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-4 {
+  left: 400%;
+}
 nav.mobile-navbar ul {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   list-style-type: none;
   background-color: #fff;
   height: 5rem;
