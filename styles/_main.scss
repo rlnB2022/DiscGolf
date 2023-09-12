@@ -1,0 +1,10 @@
+main {
+	height: calc(100vh - 8rem);
+	.home-container {
+		background-image: url("../images/disc-golf-bg.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+}

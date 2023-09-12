@@ -25,5 +25,38 @@ for (const [index, button] of mobileNavButtons.entries()) {
 			}
 		});
 		button.classList.add("menu-active");
+
+		// show the correct web page
+		switch (index) {
+			case 0:
+				loadHome("index.html");
+				return;
+			case 1:
+				loadHome("shop.html");
+				return;
+			case 2:
+				loadHome("contact.html");
+				return;
+			case 3:
+				loadHome("cart.html");
+				return;
+			default:
+				return;
+		}
 	});
 }
+
+/**
+ * @param {String} url - html address
+ * @return {String} HTML string fragment
+ */
+const fetchHtmlAsText = async (url) => {
+	const response = await fetch(url);
+	const text = await response.text();
+	return text;
+};
+
+const loadHome = async (url) => {
+	const contentDiv = document.querySelector("header");
+	contentDiv.innerHTML = await fetchHtmlAsText(url);
+};

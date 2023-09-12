@@ -1,23 +1,29 @@
 @use "reset";
+@use "main";
 
 body {
 	background-color: #ccc;
 }
 header {
-	padding: 1rem;
-
 	.header-container {
 		display: flex;
+		background-color: #fff;
+		padding: 1rem;
 
 		.logo {
+			font-size: 1.5rem;
+			color: #000;
+			.logo-orange {
+				color: orange;
+				font-weight: 700;
+			}
 		}
 
 		nav {
 			&.desktop-nav-bar {
-				display: none;
 			}
 			ul {
-				display: flex;
+				display: none;
 				list-style-type: none;
 
 				li {
@@ -32,7 +38,7 @@ nav {
 	&.mobile-navbar {
 		position: relative;
 		display: block;
-		position: absolute;
+		position: fixed;
 		bottom: 0;
 		left: 0;
 		right: 0;

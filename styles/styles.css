@@ -5,21 +5,36 @@
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  height: calc(100vh - 8rem);
+}
+main .home-container {
+  background-image: url("../images/disc-golf-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
 body {
   background-color: #ccc;
 }
 
-header {
-  padding: 1rem;
-}
 header .header-container {
   display: flex;
+  background-color: #fff;
+  padding: 1rem;
 }
-header .header-container nav.desktop-nav-bar {
-  display: none;
+header .header-container .logo {
+  font-size: 1.5rem;
+  color: #000;
+}
+header .header-container .logo .logo-orange {
+  color: orange;
+  font-weight: 700;
 }
 header .header-container nav ul {
-  display: flex;
+  display: none;
   list-style-type: none;
 }
 header .header-container nav ul li {
@@ -29,7 +44,7 @@ header .header-container nav ul li {
 nav.mobile-navbar {
   position: relative;
   display: block;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
