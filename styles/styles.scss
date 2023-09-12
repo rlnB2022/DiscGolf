@@ -43,35 +43,9 @@ nav {
 		left: 0;
 		right: 0;
 
-		.menu-selector-wrapper {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			hr {
-				&.menu-selector {
-					position: relative;
-					height: 4px;
-					width: 100%;
-					left: 0;
-					top: 2px;
-					background-color: #000;
-					transition: all 0.25s ease-in-out;
-
-					&.menu-1 {
-						left: 100%;
-					}
-
-					&.menu-2 {
-						left: 200%;
-					}
-
-					&.menu-3 {
-						left: 300%;
-					}
-
-					// &.menu-4 {
-					// 	left: 400%;
-					// }
-				}
+		a {
+			&.nav-link {
+				text-decoration: none;
 			}
 		}
 
@@ -113,6 +87,7 @@ nav {
 				}
 
 				&.menu-active {
+					border-top: 4px solid #000;
 					.mobile-menu-icon-container {
 						top: 0;
 					}
