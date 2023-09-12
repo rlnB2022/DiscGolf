@@ -36,13 +36,14 @@ nav.mobile-navbar {
 }
 nav.mobile-navbar .menu-selector-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 nav.mobile-navbar .menu-selector-wrapper hr.menu-selector {
   position: relative;
-  height: 3px;
+  height: 4px;
   width: 100%;
   left: 0;
+  top: 2px;
   background-color: #000;
   transition: all 0.25s ease-in-out;
 }
@@ -55,12 +56,9 @@ nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-2 {
 nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-3 {
   left: 300%;
 }
-nav.mobile-navbar .menu-selector-wrapper hr.menu-selector.menu-4 {
-  left: 400%;
-}
 nav.mobile-navbar ul {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   list-style-type: none;
   background-color: #fff;
   height: 5rem;

@@ -39,13 +39,14 @@ nav {
 
 		.menu-selector-wrapper {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			hr {
 				&.menu-selector {
 					position: relative;
-					height: 3px;
+					height: 4px;
 					width: 100%;
 					left: 0;
+					top: 2px;
 					background-color: #000;
 					transition: all 0.25s ease-in-out;
 
@@ -61,16 +62,16 @@ nav {
 						left: 300%;
 					}
 
-					&.menu-4 {
-						left: 400%;
-					}
+					// &.menu-4 {
+					// 	left: 400%;
+					// }
 				}
 			}
 		}
 
 		ul {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 			list-style-type: none;
 			background-color: #fff;
 			height: 5rem;
