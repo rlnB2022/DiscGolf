@@ -60,6 +60,7 @@ header nav {
   align-items: center;
 }
 header nav .hamburger-container .hamburger-line {
+  position: relative;
   background-color: #000;
   height: 4px;
   width: 30px;
@@ -74,12 +75,13 @@ header nav .hamburger-container .hamburger-line.line-hidden {
   opacity: 0;
 }
 header nav .hamburger-container .hamburger-line.rotate-down {
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-1px);
   transform-origin: top left;
+  left: 2px;
 }
 header nav .hamburger-container .hamburger-line.rotate-up {
-  transform: rotate(-45deg);
-  transform-origin: bottom left;
+  transform: rotate(-45deg) translateY(1px);
+  transform-origin: top left;
 }
 header nav .logo-and-title {
   display: flex;

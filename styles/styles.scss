@@ -15,6 +15,7 @@ header {
 
 		.hamburger-container {
 			.hamburger-line {
+				position: relative;
 				background-color: #000;
 				height: 4px;
 				width: 30px;
@@ -31,13 +32,14 @@ header {
 				}
 
 				&.rotate-down {
-					transform: rotate(45deg);
+					transform: rotate(45deg) translateY(-1px);
 					transform-origin: top left;
+					left: 2px;
 				}
 
 				&.rotate-up {
-					transform: rotate(-45deg);
-					transform-origin: bottom left;
+					transform: rotate(-45deg) translateY(1px);
+					transform-origin: top left;
 				}
 			}
 		}
