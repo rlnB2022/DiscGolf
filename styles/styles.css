@@ -43,7 +43,7 @@ main .home-container .hero-container button a {
 }
 main .home-container .hero-container button a:link, main .home-container .hero-container button a:active, main .home-container .hero-container button a:visited {
   color: #fff;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 body {
@@ -64,9 +64,22 @@ header nav .hamburger-container .hamburger-line {
   height: 4px;
   width: 30px;
   border-radius: 10px;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
 }
 header nav .hamburger-container .hamburger-line:nth-child(2) {
   margin: 0.35rem 0;
+}
+header nav .hamburger-container .hamburger-line.line-hidden {
+  opacity: 0;
+}
+header nav .hamburger-container .hamburger-line.rotate-down {
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+header nav .hamburger-container .hamburger-line.rotate-up {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
 }
 header nav .logo-and-title {
   display: flex;

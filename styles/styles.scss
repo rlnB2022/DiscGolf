@@ -19,9 +19,25 @@ header {
 				height: 4px;
 				width: 30px;
 				border-radius: 10px;
+				transition: all 0.4s ease-in-out;
+				opacity: 1;
 
 				&:nth-child(2) {
 					margin: 0.35rem 0;
+				}
+
+				&.line-hidden {
+					opacity: 0;
+				}
+
+				&.rotate-down {
+					transform: rotate(45deg);
+					transform-origin: top left;
+				}
+
+				&.rotate-up {
+					transform: rotate(-45deg);
+					transform-origin: bottom left;
 				}
 			}
 		}
