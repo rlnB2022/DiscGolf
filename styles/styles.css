@@ -6,7 +6,7 @@
 }
 
 main {
-  height: calc(100vh - 60px);
+  height: 90vh;
 }
 main .home-container {
   background-image: url("../images/disc-golf-bg2.jpg");
@@ -47,7 +47,6 @@ main .home-container .hero-container button a:link, main .home-container .hero-c
 }
 
 body {
-  background-color: #ccc;
   min-height: 100vh;
 }
 
@@ -154,6 +153,76 @@ header .mobile-nav .mobile-nav-item {
 header .mobile-nav .mobile-nav-item a {
   text-decoration: none;
   color: #000;
+}
+
+section.separator {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #777;
+}
+section.separator h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+section.separator h4 {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+section.location h3 {
+  font-size: 1.25rem;
+  padding: 1rem;
+  font-weight: 400;
+}
+section.location img {
+  width: 100%;
+}
+
+footer {
+  background-color: #fff;
+  background-image: url("../images/grassy-knoll.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5rem;
+  text-align: center;
+}
+footer h2 {
+  color: #fff;
+  margin-top: 2rem;
+}
+footer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 1rem;
+}
+footer form input,
+footer form textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(170, 170, 170, 0.6666666667);
+  color: #ccc;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+footer form input::-moz-placeholder, footer form textarea::-moz-placeholder {
+  color: #ccc;
+}
+footer form input::placeholder,
+footer form textarea::placeholder {
+  color: #ccc;
+}
+footer form button#submit {
+  background-color: #557936;
+  padding: 1rem 3rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
 }
 
 @supports (height: 100dvh) {
