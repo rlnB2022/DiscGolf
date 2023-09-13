@@ -182,47 +182,109 @@ section.location img {
 footer {
   background-color: #fff;
   background-image: url("../images/grassy-knoll.jpg");
-  background-position: center;
+  background-position: -400px 0px;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 5rem;
   text-align: center;
+  padding-bottom: 5rem;
+}
+footer img {
+  padding-top: 3rem;
 }
 footer h2 {
   color: #fff;
-  margin-top: 2rem;
+  margin: 1rem 0;
 }
-footer form {
+footer .footer-div {
+  padding: 0 1rem;
+  color: #fff;
+}
+footer .footer-div form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0;
 }
-footer form input,
-footer form textarea {
+footer .footer-div form input,
+footer .footer-div form textarea {
   font-size: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: rgba(170, 170, 170, 0.6666666667);
   color: #ccc;
   border: 1px solid #ddd;
   margin-bottom: 0.5rem;
   border-radius: 5px;
 }
-footer form input::-moz-placeholder, footer form textarea::-moz-placeholder {
+footer .footer-div form input::-moz-placeholder, footer .footer-div form textarea::-moz-placeholder {
   color: #ccc;
 }
-footer form input::placeholder,
-footer form textarea::placeholder {
+footer .footer-div form input::placeholder,
+footer .footer-div form textarea::placeholder {
   color: #ccc;
 }
-footer form button#submit {
+footer .footer-div form button#submit {
   background-color: #557936;
   padding: 1rem 3rem;
   border: 1px solid #fff;
   border-radius: 5px;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #fff;
+  letter-spacing: 1.5px;
+}
+footer .footer-div .follow-us {
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+footer .footer-div .follow-us h3 {
+  margin-right: 2rem;
+  font-weight: 400;
+}
+footer .footer-div .follow-us .social-icons {
+  display: flex;
+}
+footer .footer-div .follow-us .social-icons .fa-brands {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+}
+footer .footer-div .follow-us .social-icons .fa-facebook-f {
+  color: #fff;
+  background-color: #4267b2;
+}
+footer .footer-div .follow-us .social-icons .fa-instagram {
+  background: linear-gradient(45deg, #ffdc80, #af2eb7);
+  margin: 0 1rem;
+}
+footer .footer-div .follow-us .social-icons .fa-x-twitter {
+  background-color: rgba(204, 204, 204, 0.4666666667);
+}
+footer .footer-div.split {
+  display: flex;
+  text-align: left;
+}
+footer .footer-div.split h4 {
+  text-align: left;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+footer .footer-div.split h5 {
+  margin-top: 1rem;
+}
+footer .footer-div.split ul {
+  list-style-type: none;
+}
+footer .footer-div.split ul li:nth-child(2) {
+  margin: 1rem 0;
+}
+footer .footer-div.split p {
+  color: #ccc;
 }
 
 @supports (height: 100dvh) {
