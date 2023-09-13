@@ -5,30 +5,73 @@ body {
 	background-color: #ccc;
 }
 header {
-	.header-container {
-		display: flex;
-		background-color: #fff;
-		padding: 1rem;
+	background-color: #fff;
+	padding: 1rem;
 
-		.logo {
-			font-size: 1.5rem;
-			color: #000;
-			.logo-orange {
-				color: orange;
-				font-weight: 700;
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.hamburger-container {
+			.hamburger-line {
+				background-color: #000;
+				height: 4px;
+				width: 30px;
+				border-radius: 10px;
+
+				&:nth-child(2) {
+					margin: 0.35rem 0;
+				}
 			}
 		}
 
-		nav {
-			&.desktop-nav-bar {
-			}
-			ul {
-				display: none;
-				list-style-type: none;
+		.logo-and-title {
+			display: flex;
 
-				li {
-					margin: 0 1rem;
-				}
+			img {
+				margin-right: 0.25rem;
+			}
+			.title {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				font-size: 1.25rem;
+				color: #000;
+			}
+		}
+
+		.shopping-cart {
+			position: relative;
+
+			.cart-count {
+				position: absolute;
+				top: -10px;
+				right: -3px;
+				background-color: red;
+				padding: 0.5rem;
+				border-radius: 50%;
+				width: 1.25rem;
+				height: 1.25rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				font-size: 0.625rem;
+				font-weight: 600;
+			}
+
+			.fa-cart-shopping {
+				font-size: 1.5rem;
+				padding-right: 0.5rem;
+			}
+		}
+		ul {
+			display: none;
+			list-style-type: none;
+
+			li {
+				margin: 0 1rem;
 			}
 		}
 	}
@@ -46,6 +89,11 @@ nav {
 		a {
 			&.nav-link {
 				text-decoration: none;
+				&:active,
+				&:visited,
+				&:link {
+					color: #000;
+				}
 			}
 		}
 
@@ -71,6 +119,7 @@ nav {
 					display: flex;
 					justify-content: center;
 					align-items: center;
+					color: #000;
 
 					.mobile-menu-icon-container {
 						position: absolute;

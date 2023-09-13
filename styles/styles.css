@@ -6,38 +6,109 @@
 }
 
 main {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 60px);
 }
 main .home-container {
-  background-image: url("../images/disc-golf-bg.jpg");
+  background-image: url("../images/disc-golf-bg2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .home-container .hero-container {
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+main .home-container .hero-container h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+main .home-container .hero-container p {
+  font-size: 1rem;
+  margin: 1rem 0 2rem;
+}
+main .home-container .hero-container button {
+  background-color: red;
+  padding: 1rem 3rem;
+  border: 0;
+  border-radius: 10rem;
+}
+main .home-container .hero-container button a {
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+main .home-container .hero-container button a:link, main .home-container .hero-container button a:active, main .home-container .hero-container button a:visited {
+  color: #fff;
+  font-weight: 700;
 }
 
 body {
   background-color: #ccc;
 }
 
-header .header-container {
-  display: flex;
+header {
   background-color: #fff;
   padding: 1rem;
 }
-header .header-container .logo {
-  font-size: 1.5rem;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .hamburger-container .hamburger-line {
+  background-color: #000;
+  height: 4px;
+  width: 30px;
+  border-radius: 10px;
+}
+header nav .hamburger-container .hamburger-line:nth-child(2) {
+  margin: 0.35rem 0;
+}
+header nav .logo-and-title {
+  display: flex;
+}
+header nav .logo-and-title img {
+  margin-right: 0.25rem;
+}
+header nav .logo-and-title .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
   color: #000;
 }
-header .header-container .logo .logo-orange {
-  color: orange;
-  font-weight: 700;
+header nav .shopping-cart {
+  position: relative;
 }
-header .header-container nav ul {
+header nav .shopping-cart .cart-count {
+  position: absolute;
+  top: -10px;
+  right: -3px;
+  background-color: red;
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+header nav .shopping-cart .fa-cart-shopping {
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
+}
+header nav ul {
   display: none;
   list-style-type: none;
 }
-header .header-container nav ul li {
+header nav ul li {
   margin: 0 1rem;
 }
 
@@ -51,6 +122,9 @@ nav.mobile-navbar {
 }
 nav.mobile-navbar a.nav-link {
   text-decoration: none;
+}
+nav.mobile-navbar a.nav-link:active, nav.mobile-navbar a.nav-link:visited, nav.mobile-navbar a.nav-link:link {
+  color: #000;
 }
 nav.mobile-navbar ul {
   display: grid;
@@ -74,6 +148,7 @@ nav.mobile-navbar ul li .mobile-menu-item-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #000;
 }
 nav.mobile-navbar ul li .mobile-menu-item-container .mobile-menu-icon-container {
   position: absolute;
