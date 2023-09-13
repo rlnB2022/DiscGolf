@@ -39,25 +39,30 @@ main .home-container .hero-container button {
 }
 main .home-container .hero-container button a {
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 main .home-container .hero-container button a:link, main .home-container .hero-container button a:active, main .home-container .hero-container button a:visited {
   color: #fff;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 body {
   background-color: #ccc;
+  min-height: 100vh;
 }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
   background-color: #fff;
-  padding: 1rem;
+  border-bottom: 1px solid #eee;
 }
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 header nav .hamburger-container .hamburger-line {
   position: relative;
@@ -126,60 +131,33 @@ header nav ul {
 header nav ul li {
   margin: 0 1rem;
 }
-
-nav.mobile-navbar {
-  position: relative;
-  display: block;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-nav.mobile-navbar a.nav-link {
-  text-decoration: none;
-}
-nav.mobile-navbar a.nav-link:active, nav.mobile-navbar a.nav-link:visited, nav.mobile-navbar a.nav-link:link {
-  color: #000;
-}
-nav.mobile-navbar ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  list-style-type: none;
-  background-color: #fff;
-  height: 5rem;
-  overflow: hidden;
-}
-nav.mobile-navbar ul li {
-  position: relative;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid transparent;
-}
-nav.mobile-navbar ul li .mobile-menu-item-container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-}
-nav.mobile-navbar ul li .mobile-menu-item-container .mobile-menu-icon-container {
+header .mobile-nav {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  left: -75%;
+  width: 75vw;
   background-color: #fff;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
 }
-nav.mobile-navbar ul li.menu-active {
-  border-top: 4px solid #000;
+header .mobile-nav.active {
+  opacity: 1;
+  left: 0;
 }
-nav.mobile-navbar ul li.menu-active .mobile-menu-icon-container {
-  top: 0;
+header .mobile-nav .mobile-nav-item {
+  padding: 1.25rem 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid #eee;
+}
+header .mobile-nav .mobile-nav-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+@supports (height: 100dvh) {
+  .mobile-nav {
+    height: calc(100dvh - 100%);
+  }
 }
